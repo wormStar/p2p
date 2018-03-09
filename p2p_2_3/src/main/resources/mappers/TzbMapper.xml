@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.animo.dao.TzbMapper" >
+  <resultMap id="BaseResultMap" type="com.animo.pojo.Tzb" >
+    <id column="tzid" property="tzid" jdbcType="INTEGER" />
+    <result column="uid" property="uid" jdbcType="INTEGER" />
+    <result column="juid" property="juid" jdbcType="INTEGER" />
+    <result column="money" property="money" jdbcType="DECIMAL" />
+    <result column="tztime" property="tztime" jdbcType="TIMESTAMP" />
+    <result column="nprofit" property="nprofit" jdbcType="REAL" />
+    <result column="cpname" property="cpname" jdbcType="VARCHAR" />
+    <result column="baid" property="baid" jdbcType="INTEGER" />
+    <result column="resint1" property="resint1" jdbcType="INTEGER" />
+    <result column="resint2" property="resint2" jdbcType="INTEGER" />
+    <result column="resint3" property="resint3" jdbcType="INTEGER" />
+    <result column="resint4" property="resint4" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    tzid, uid, juid, money, tztime, nprofit, cpname, baid, resint1, resint2, resint3, 
+    resint4
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from tzb
+    where tzid = #{tzid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tzb
+    where tzid = #{tzid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.animo.pojo.Tzb" >
+    insert into tzb (tzid, uid, juid, 
+      money, tztime, nprofit, 
+      cpname, baid, resint1, 
+      resint2, resint3, resint4
+      )
+    values (#{tzid,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{juid,jdbcType=INTEGER}, 
+      #{money,jdbcType=DECIMAL}, #{tztime,jdbcType=TIMESTAMP}, #{nprofit,jdbcType=REAL}, 
+      #{cpname,jdbcType=VARCHAR}, #{baid,jdbcType=INTEGER}, #{resint1,jdbcType=INTEGER}, 
+      #{resint2,jdbcType=INTEGER}, #{resint3,jdbcType=INTEGER}, #{resint4,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.animo.pojo.Tzb" >
+    insert into tzb
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="tzid != null" >
+        tzid,
+      </if>
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="juid != null" >
+        juid,
+      </if>
+      <if test="money != null" >
+        money,
+      </if>
+      <if test="tztime != null" >
+        tztime,
+      </if>
+      <if test="nprofit != null" >
+        nprofit,
+      </if>
+      <if test="cpname != null" >
+        cpname,
+      </if>
+      <if test="baid != null" >
+        baid,
+      </if>
+      <if test="resint1 != null" >
+        resint1,
+      </if>
+      <if test="resint2 != null" >
+        resint2,
+      </if>
+      <if test="resint3 != null" >
+        resint3,
+      </if>
+      <if test="resint4 != null" >
+        resint4,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="tzid != null" >
+        #{tzid,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null" >
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="juid != null" >
+        #{juid,jdbcType=INTEGER},
+      </if>
+      <if test="money != null" >
+        #{money,jdbcType=DECIMAL},
+      </if>
+      <if test="tztime != null" >
+        #{tztime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="nprofit != null" >
+        #{nprofit,jdbcType=REAL},
+      </if>
+      <if test="cpname != null" >
+        #{cpname,jdbcType=VARCHAR},
+      </if>
+      <if test="baid != null" >
+        #{baid,jdbcType=INTEGER},
+      </if>
+      <if test="resint1 != null" >
+        #{resint1,jdbcType=INTEGER},
+      </if>
+      <if test="resint2 != null" >
+        #{resint2,jdbcType=INTEGER},
+      </if>
+      <if test="resint3 != null" >
+        #{resint3,jdbcType=INTEGER},
+      </if>
+      <if test="resint4 != null" >
+        #{resint4,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.animo.pojo.Tzb" >
+    update tzb
+    <set >
+      <if test="uid != null" >
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="juid != null" >
+        juid = #{juid,jdbcType=INTEGER},
+      </if>
+      <if test="money != null" >
+        money = #{money,jdbcType=DECIMAL},
+      </if>
+      <if test="tztime != null" >
+        tztime = #{tztime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="nprofit != null" >
+        nprofit = #{nprofit,jdbcType=REAL},
+      </if>
+      <if test="cpname != null" >
+        cpname = #{cpname,jdbcType=VARCHAR},
+      </if>
+      <if test="baid != null" >
+        baid = #{baid,jdbcType=INTEGER},
+      </if>
+      <if test="resint1 != null" >
+        resint1 = #{resint1,jdbcType=INTEGER},
+      </if>
+      <if test="resint2 != null" >
+        resint2 = #{resint2,jdbcType=INTEGER},
+      </if>
+      <if test="resint3 != null" >
+        resint3 = #{resint3,jdbcType=INTEGER},
+      </if>
+      <if test="resint4 != null" >
+        resint4 = #{resint4,jdbcType=INTEGER},
+      </if>
+    </set>
+    where tzid = #{tzid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.animo.pojo.Tzb" >
+    update tzb
+    set uid = #{uid,jdbcType=INTEGER},
+      juid = #{juid,jdbcType=INTEGER},
+      money = #{money,jdbcType=DECIMAL},
+      tztime = #{tztime,jdbcType=TIMESTAMP},
+      nprofit = #{nprofit,jdbcType=REAL},
+      cpname = #{cpname,jdbcType=VARCHAR},
+      baid = #{baid,jdbcType=INTEGER},
+      resint1 = #{resint1,jdbcType=INTEGER},
+      resint2 = #{resint2,jdbcType=INTEGER},
+      resint3 = #{resint3,jdbcType=INTEGER},
+      resint4 = #{resint4,jdbcType=INTEGER}
+    where tzid = #{tzid,jdbcType=INTEGER}
+  </update>
+  <select id="listPagerByBaid" resultType="com.animo.vo.TzbVo">
+     SELECT u.rname,t.money,t.tztime,t.baid,u.uid  FROM tzb AS t,t_user AS u WHERE t.uid=u.uid
+         AND t.baid=#{baid}
+          <if test="uid!=null">
+            and u.uid=#{uid}
+          </if>
+          limit #{pager.beginIndex}, #{pager.pageSize}
+  </select>
+  <select id="countByBaid" resultType="long">
+      SELECT count(t.tzid) FROM tzb AS t,t_user AS u
+      WHERE t.uid=u.uid and t.baid=#{baid}
+       <if test="uid!=null">
+            and u.uid=#{uid}
+       </if>
+  </select>
+
+  <select id="listTzb" resultType="tzb">
+    <![CDATA[
+      SELECT * FROM tzb AS t WHERE uid=#{uid} and baid=#{baid}
+    ]]>
+  </select>
+
+  <select id="listInvestByUid" resultType="com.animo.vo.InvestManageVO">
+    select tz.money,tz.tztime,tz.nprofit,tz.cpname,tz.baid,bz.bzname,bw.term,sw.way from tzb as tz LEFT JOIN
+    borrowdetail as bd on tz.cpname = bd.cpname LEFT JOIN
+    borrowapply as bw on tz.baid = bw.baid LEFT JOIN
+    bz as bz on bw.bzid = bz.bzid LEFT JOIN
+    sway as sw on bd.way = sw.sid
+    where tz.uid = #{uid}   order by tz.tztime desc limit #{pager.beginIndex}, #{pager.pageSize};
+  </select>
+
+  <select id="countByUid" resultType="long">
+    select count(t.uid) from tzb as t where t.uid = #{uid}
+  </select>
+
+  <select id="getTotalTzMoney" resultType="com.animo.vo.TzCountVO">
+    select sum(tz.money) as totalMoney, tz.uid from tzb tz, t_user u
+    where u.uid = tz.uid and tz.baid = #{baid} GROUP BY tz.uid
+  </select>
+
+  <select id="getByBaid" resultType="com.animo.pojo.Tzb">
+    <![CDATA[
+      SELECT * FROM tzb WHERE baid=#{baid}
+    ]]>
+  </select>
+</mapper>

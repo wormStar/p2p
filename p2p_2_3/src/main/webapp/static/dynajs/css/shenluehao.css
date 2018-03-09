@@ -1,0 +1,32 @@
+﻿@charset "utf-8";
+.line-limit-length {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.text_overflow{
+	width:320px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	overflow:hidden;
+}
+.wth{width:150px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;course:hand;}
+.product-buyer-name {
+	max-width: 110px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.container{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.container.fold{
+	-webkit-line-clamp: 3 ;
+}
+.container.unfold{
+	-webkit-line-clamp: 100;
+}

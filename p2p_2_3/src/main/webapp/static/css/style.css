@@ -1,0 +1,217 @@
+
+body{
+    font-family:"微软雅黑","Arial";
+    font-size:14px;
+    padding:0;
+    margin:0;
+    color:#434343;
+}
+
+h1,h2,h3,h4,h5{
+    font-size:12px;
+    margin:0;
+    padding:0;
+}
+
+ul,li,dl,dt,dd,p{
+    list-style:none;
+    margin:0;
+    padding:0;
+	display:inline-block;
+}
+
+a{
+    text-decoration:none;
+    color:#494949;
+}
+
+a:hover{
+    color:#ff3131;
+}
+
+img{
+    border:0;
+    vertical-align:middle;
+}
+
+em,i{
+    font-style:normal;
+}
+
+input{
+    vertical-align:middle;
+    margin:0;
+    padding:0;
+    outline:none;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+}
+
+label{
+    vertical-align:middle;
+}
+
+select{
+    vertical-align:middle;
+}
+
+textarea{
+    outline:none;
+    resize:none;
+}
+
+.clear:after{
+    display:block;
+    clear:both;
+    content:"";
+    visibility:hidden;
+    height:0;
+}
+
+.clear{
+    zoom:1;
+}
+
+.tar{
+	margin-right:-250px;
+}
+
+
+.login{
+	width: 400px;
+	height: 450px;
+	background:#fff;
+	border-radius: 5px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin:-225px 0 0 -200px;
+	text-align:center;
+}
+
+.logo{
+	width: 50%;
+	margin:16px auto 30px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+
+}
+.logo img{
+	width: 100%;
+}
+.login-list{
+	width: 80%;
+	margin:0 auto;
+}
+.login-list li{
+	margin-bottom:15px;
+	position: relative;
+}
+.login-list input{
+	padding:10px 8px;
+	width: 300px;
+	border:1px solid #e6e6e6;
+	
+	border-radius: 3px;
+	font-size: 14px;
+}
+.login-list .btn{
+	width: 316px;
+	height: 40px;
+	line-height: 20px;
+	text-align: center;
+	background:#17b5a6;
+	font-size: 20px;
+	color:#fff;
+	display: block;
+}
+.login-list .btn:hover{
+	cursor:pointer;
+	background:#1db7a8;
+}
+.login-list .yzm{
+	position: absolute;
+	right: 5px;
+	top: 3px;
+	background:#17b5a6;
+	padding:6px;
+	color:#fff;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.login-list .yzm.gray{
+	background: #d5d5d5;
+    color: #fff;
+}
+.login-list .tar a:hover{
+	color:#17b5a6;
+}
+.login-list .yzm2{
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	cursor: pointer;
+
+}
+.login-list .yzm2 img{
+	width: 88px;
+	height: 36px;
+}
+
+.body_bj{
+	/*此部分支持chrome，也支持firefox*/
+	background: url(/static/images/login/bj.jpg) no-repeat center fixed;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	/*以下是IE部分，使用滤镜*/
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/login/bj.jpg',sizingMethod='scale');
+	background-repeat: no-repeat;
+	background-positon: 100% 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 100%;
+}
+
+.error-msg {
+	border: 1px solid #e62538;
+	height: 22px;
+	line-height: 22px;
+	background-color: #ffeded;
+	padding-left: 40px;
+	margin: 10px 0;
+	color: #e62538;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+	-moz-transition-duration: .3s;
+}
+
+.error-msg.show {
+	opacity: 1;
+	filter: alpha(opacity=100)
+}
+
+.error {
+	border: 1px solid #e62538!important;
+}
+
+.icon {
+	background-image: url('../images/login/icon.png');
+	background-repeat: no-repeat;
+}
+
+.icon-error {
+	background-position: 16px -1247px;
+}
+
+
+
+
+
+
